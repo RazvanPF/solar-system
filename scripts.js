@@ -1,50 +1,61 @@
 // Function to show details in the sidebar
 function showDetails(name, description, age, mass, gravity, atmosphere, imgPath) {
-    // Show the sidebar
-    document.getElementById('sidebar').style.display = 'flex';
-    
-    // Replace content with the specific details
-    document.getElementById('name').textContent = name;
-    document.getElementById('description').textContent = description;
-    if (age) {
-        document.getElementById('age').textContent = age;
-    }
-    if (mass) {
-        document.getElementById('mass').textContent = mass;
-    }
-    if (gravity) {
-        document.getElementById('gravity').textContent = gravity;
-    }
-    if (atmosphere) {
-        document.getElementById('atmosphere').textContent = atmosphere;
-    }
-    // Set image only if it's not Asteroid Belt
-    if (name !== 'Asteroid Belt') {
-        document.getElementById('sidebar-img').src = imgPath;
-        document.getElementById('sidebar-img').alt = name;
-        document.getElementById('sidebar-img').style.display = 'block';
+    // Get sidebar elements
+    const sidebar = document.getElementById('sidebar');
+    const sidebarImg = document.getElementById('sidebar-img');
+    const nameElem = document.getElementById('name');
+    const descriptionElem = document.getElementById('description');
+    const ageElem = document.getElementById('age');
+    const massElem = document.getElementById('mass');
+    const gravityElem = document.getElementById('gravity');
+    const atmosphereElem = document.getElementById('atmosphere');
+
+    // Check if all elements exist
+    if (sidebar && sidebarImg && nameElem && descriptionElem && ageElem && massElem && gravityElem && atmosphereElem) {
+        // Show the sidebar
+        sidebar.style.display = 'flex';
+
+        // Replace content with the specific details
+        nameElem.textContent = name;
+        descriptionElem.textContent = description;
+        ageElem.textContent = age ? age : 'N/A';
+        massElem.textContent = mass ? mass : 'N/A';
+        gravityElem.textContent = gravity ? gravity : 'N/A';
+        atmosphereElem.textContent = atmosphere ? atmosphere : 'N/A';
+
+        // Set image only if it's not Asteroid Belt
+        if (name !== 'Asteroid Belt') {
+            sidebarImg.src = imgPath;
+            sidebarImg.alt = name;
+            sidebarImg.style.display = 'block';
+        } else {
+            // Hide image for Asteroid Belt
+            sidebarImg.style.display = 'none';
+        }
+
+        // Remove grow effect from all celestial bodies and moons
+        document.querySelectorAll('.celestial-body, .moon').forEach(body => {
+            body.style.transform = 'scale(1)';
+        });
+
+        // Apply grow effect only to the clicked celestial body
+        if (name !== 'Asteroid Belt') { // Exclude Asteroid Belt from hover effect
+            const element = document.querySelector(`.celestial-body.${name.toLowerCase()}`);
+            if (element) {
+                element.style.transform = 'scale(1.1)';
+            }
+        }
     } else {
-        // Hide image for Asteroid Belt
-        document.getElementById('sidebar-img').style.display = 'none';
-    }
-    
-    document.getElementById('sidebar-img').src = imgPath;
-    document.getElementById('sidebar-img').alt = name;
-
-    // Remove grow effect from all celestial bodies and moons
-    document.querySelectorAll('.celestial-body, .moon').forEach(body => {
-        body.style.transform = 'scale(1)';
-    });
-
-    // Apply grow effect only to the clicked celestial body
-    if (name !== 'Asteroid Belt') { // Exclude Asteroid Belt from hover effect
-        document.querySelector(`.celestial-body.${name.toLowerCase()}`).style.transform = 'scale(1.1)';
+        console.error('One or more elements are missing.');
     }
 }
 
 // Function to close the sidebar
 function closeSidebar() {
-    document.getElementById('sidebar').style.display = 'none';
+    const sidebar = document.getElementById('sidebar');
+    if (sidebar) {
+        sidebar.style.display = 'none';
+    }
     
     // Remove grow effect from all celestial bodies and moons
     document.querySelectorAll('.celestial-body, .moon').forEach(body => {
@@ -67,7 +78,3 @@ document.querySelectorAll('.celestial-body, .moon').forEach(body => {
         }
     });
 });
-
-
-
-
