@@ -1,0 +1,62 @@
+# Solar System Explorer
+
+Solar System Explorer is an interactive 2D web application that allows users to explore the solar system. The app provides detailed information about the Sun, planets, moons, and the asteroid belt, all presented with engaging visuals and a smooth user experience.
+
+## Features
+
+- **Educational Solar System**:
+  - Explore the solar system by clicking on celestial bodies to learn more about them.
+  - Detailed descriptions include key facts such as age, mass, gravity, and atmospheric composition.
+
+- **Sidebar Information Panel**:
+  - A sidebar opens when a celestial body is selected, displaying relevant information and an image of the selected object.
+  - The sidebar can be closed to return to the main view.
+
+- **Hover Effects**:
+  - Celestial bodies and moons have subtle hover effects, enhancing the interactive experience.
+  - The selected body is highlighted with a "grow" effect to focus attention.
+
+- **Starry Background**:
+  - A dynamic starry background creates an immersive space environment with twinkling stars.
+
+- **Explore in 3D**:
+  - A link to explore the solar system in a 3D view is provided, offering a more immersive experience. The 3D view takes to the SOL system simulation which is a standalone version. For more solar systems visit the STAR CLUSTER (WIP) project here: https://github.com/RazvanPF/Star-Cluster
+
+## How It Works
+
+1. **Select a Celestial Body**:
+   - Click on any celestial body to open the sidebar with detailed information.
+
+2. **Close the Sidebar**:
+   - Click the "X" button on the sidebar to close it and return to the main view.
+
+3. **Hover Over Elements**:
+   - Hover over planets or moons to see them grow slightly, indicating they can be selected for more information.
+
+4. **Explore in 3D**:
+   - Use the provided link to explore the solar system in a 3D interactive environment.
+
+## Visual Design
+
+- **Celestial Bodies**:
+  - Each planet and moon is represented with an image. The Sun is prominently displayed as the first celestial body and then from left to right all planets in order. Below each planet , vertically listed their most known moons.
+  - Special attention is given to size and scale, with larger celestial bodies like Jupiter and Saturn appearing more substantial.
+
+- **Sidebar**:
+  - The sidebar is styled with a dark theme to match the overall space environment, displaying information in a structured and readable format.
+
+- **Starry Background**:
+  - The starry background is animated, with stars twinkling softly to enhance the space ambiance.
+
+## License
+
+This project is open-source. Feel free to use, modify, and distribute it as you wish.
+
+## Credits
+
+- Developed by [Razvan Faraon]
+- Images and textures sourced from free online resources. Ensure compliance with their licenses, design your own or purchase your own licenses for any commercial use.
+
+For any questions or support, feel free to reach out via [farirazvan@gmail.com].
+
+Explore the vastness of the solar system and learn about the celestial bodies that inhabit it with Solar System Explorer!
