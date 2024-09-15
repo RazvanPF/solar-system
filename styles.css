@@ -219,3 +219,160 @@ body {
 .explore-icon-wrapper:hover .explore-button {
     opacity: 1;
 }
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    /* Adjust body layout for mobile */
+    body {
+        height: 100vh; /* Keep the height fixed for the mobile view */
+        overflow-x: hidden; /* Prevent horizontal scrolling for the body itself */
+    }
+
+    /* Make the sidebar full-width and appear from the bottom on mobile */
+    .sidebar {
+        width: 100%;
+        height: 50%;
+        bottom: 0;
+        top: auto;
+        padding: 10px;
+    }
+
+    /* Solar system container should scroll horizontally */
+    .solar-system {
+        display: flex;
+        flex-direction: row; /* Align items in a row */
+        align-items: center;
+        justify-content: flex-start;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent wrapping of elements */
+        padding: 10px;
+    }
+
+    /* Ensure celestial bodies are spaced out and aligned horizontally */
+    .celestial-body {
+        margin-right: 40px; /* Add space between planets */
+        display: inline-block; /* Make them inline elements to prevent wrapping */
+        position: relative;
+        white-space: normal; /* Reset white space so text doesn't behave strangely */
+    }
+
+    .celestial-body img {
+        width: 50px; /* Smaller size for planets */
+        height: 50px;
+    }
+
+    .sun img {
+        width: 200px; /* Adjust size for the Sun */
+        height: 200px;
+        margin-left: 50px;
+    }
+
+    .moons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: -50px; /* Add space between planet and its moons */
+    }
+
+    .moon {
+        width: 30px !important;
+        height: 30px !important;
+        margin-left: 5px; /* Add space between moons */
+    }
+
+    /* Ensure the Explore button is below everything */
+    .explore-icon-wrapper {
+        justify-content: center;
+        width: 100%;
+        margin-top: 20px;
+        position: relative;
+        bottom: 0;
+    }
+
+    .explore-icon {
+        display: none;
+    }
+
+    .explore-button {
+        display:none;
+    }
+}
+
+/* Even smaller screens (like mobile in portrait mode) */
+@media screen and (max-width: 480px) {
+    /* Further reduce celestial body sizes */
+    .celestial-body img {
+        width: 40px;
+        height: 40px;
+        margin-right: 30px; /* Adjust margin for smaller screens */
+    }
+
+    .sun img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .moon {
+        width: 25px !important;
+        height: 25px !important;
+        margin-left: 5px; /* Keep margins between moons */
+    }
+
+    /* Ensure the explore button is at the bottom */
+    .explore-icon-wrapper {
+        margin-top: 30px;
+    }
+}
+
+.sidebar {
+    width: 95%;              /* Full width */
+    height: 100%;             /* Full height */
+    top: 0;                   /* Position at the top */
+    left: 0;                  /* Position at the left */
+    background-color: #1e1e1e; /* Dark background */
+    padding: 20px;            /* Padding for content inside */
+    display: none;            /* Hidden by default */
+    flex-direction: column;   /* Ensure column layout for content */
+    position: fixed;          /* Fixed to viewport */
+    z-index: 1000;            /* Ensure it's above all other content */
+    overflow-y: auto;         /* Allow scrolling for content if it overflows */
+}
+
+/* Make sure the image in the sidebar scales properly */
+.sidebar img {
+    width: 100%;              /* Full width for the image */
+    height: auto;             /* Keep aspect ratio */
+    max-width: 400px;         /* Optional: maximum width for larger screens */
+    margin-bottom: 20px;
+    align-self: center;       /* Center the image horizontally */
+}
+
+/* Close button positioned in the top-right corner */
+.close-btn {
+    position: absolute;       /* Absolute positioning */
+    top: 10px;                /* Position it in the top-right corner */
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Ensure sidebar text content scales properly */
+.sidebar h2,
+.sidebar p {
+    text-align: center;       /* Center the text content */
+    margin-bottom: 20px;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        padding: 10px;        /* Adjust padding on smaller screens */
+    }
+
+    .sidebar img {
+        max-width: 300px;     /* Limit the size of the image on smaller screens */
+    }
+}
