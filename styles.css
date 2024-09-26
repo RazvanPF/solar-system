@@ -26,7 +26,7 @@ body {
 }
 
 .sidebar img {
-    width: 100%; /* Adjust as necessary */
+    width: 100%; 
     margin-bottom: 20px;
 }
 
@@ -46,7 +46,7 @@ body {
     justify-content: center;
     position: relative;
     overflow-x: auto;
-    transform: translateX(-30px); /* Adjust this value to move left */
+    transform: translateX(-30px); 
 }
 
 .celestial-body {
@@ -56,91 +56,89 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.3s; /* Grow effect */
+    transition: transform 0.3s;
 }
 
 .celestial-body:hover {
-    transform: scale(1.1); /* Grow on hover */
+    transform: scale(1.1); 
 }
 
 .moon:hover {
-    transform: scale(1.1); /* Grow on hover */
+    transform: scale(1.1); 
 }
 
 .celestial-body img {
-    width: 80px; /* Base size for planets */
-    height: 80px; /* Base size for planets */
+    width: 80px;
+    height: 80px; 
 }
 
 .sun img {
-    width: 300px; /* Thrice the size of the planets */
-    height: 300px; /* Thrice the size of the planets */
+    width: 300px; 
+    height: 300px; 
 }
 
 /* Specific sizes for gas giants */
 .mercury img {
-    width: 90px; /* Larger size for Jupiter */
-    height: auto; /* Maintain aspect ratio */
+    width: 90px;
+    height: auto; 
 }
 
 .venus img {
-    width: 80px; /* Larger size for Jupiter */
-    height: auto; /* Maintain aspect ratio */
+    width: 80px; 
+    height: auto; 
 }
 
 .earth img {
-    width: 80px; /* Larger size for Jupiter */
-    height: auto; /* Maintain aspect ratio */
+    width: 80px;
+    height: auto;
 }
 .mars img {
-    width: 70px; /* Larger size for Jupiter */
-    height: auto; /* Maintain aspect ratio */
+    width: 70px; 
+    height: auto; 
 }
 
 .jupiter img {
-    width: 120px; /* Larger size for Jupiter */
-    height: auto; /* Maintain aspect ratio */
+    width: 120px;
+    height: auto; 
 }
 
 .saturn img {
-    width: 180px; /* Larger size for Saturn */
-    height: auto; /* Maintain aspect ratio */
+    width: 180px; 
+    height: auto; 
 }
 
 .uranus img {
-    width: 100px; /* Larger size for Uranus */
-    height: auto; /* Maintain aspect ratio */
+    width: 100px; 
+    height: auto;
 }
 
 .neptune img {
-    width: 130px; /* Larger size for Neptune */
-    height: auto; /* Maintain aspect ratio */
+    width: 130px; 
+    height: auto; 
 }
 
 .moons {
     position: absolute;
-    top: 140px; /* Adjust this value based on the height of the planet image */
+    top: 140px; 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .moon {
-    width: 50px !important; /* Half the size of the planets */
-    height: 50px !important; /* Half the size of the planets */
+    width: 50px !important; 
+    height: 50px !important; 
     margin-top: 5px;
 }
 
 /* Adjust positioning and styling for Asteroid Belt */
 .asteroid-belt {
-    position: relative; /* or absolute, based on your layout needs */
-    /* Add specific styles as necessary */
+    position: relative; 
 }
 
 .asteroid-belt img {
-    width: 75px; /* Adjust size as necessary */
-    height: 250px; /* Adjust size as necessary */
-    /* Additional styles */
+    width: 75px;
+    height: 250px; 
 }
 
 .starry-background {
@@ -149,7 +147,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Behind all other elements */
+    z-index: -1; 
     overflow: hidden;
 }
 
@@ -161,7 +159,7 @@ body {
     width: 100%;
     height: 100%;
     background: transparent;
-    background-size: 2px 2px; /* Adjust star density */
+    background-size: 2px 2px; 
     background-image:
         radial-gradient(2px 2px at 20% 30%, white, transparent),
         radial-gradient(2px 2px at 50% 70%, white, transparent),
@@ -186,21 +184,21 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    margin-left: 0px; /* Adjust as necessary */
+    margin-left: 0px; 
 }
 
 .explore-icon {
     font-size: 20px;
     color: blue;
     cursor: pointer;
-    transition: transform 0.6s ease; /* Slower transition */
+    transition: transform 0.6s ease; 
     z-index: 1;
     position: absolute;
     left: 0;
 }
 
 .explore-button {
-    margin-left: 30px; /* Adjust to keep it aligned with the icon's final position */
+    margin-left: 30px;
     padding: 5px 10px;
     border: 1px solid blue;
     border-radius: 5px;
@@ -213,7 +211,7 @@ body {
 }
 
 .explore-icon-wrapper:hover .explore-icon {
-    transform: translateX(15px); /* Slide to the right */
+    transform: translateX(15px);
 }
 
 .explore-icon-wrapper:hover .explore-button {
@@ -222,13 +220,11 @@ body {
 
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
-    /* Adjust body layout for mobile */
     body {
-        height: 100vh; /* Keep the height fixed for the mobile view */
-        overflow-x: hidden; /* Prevent horizontal scrolling for the body itself */
+        height: 100vh; 
+        overflow-x: hidden; 
     }
 
-    /* Make the sidebar full-width and appear from the bottom on mobile */
     .sidebar {
         width: 100%;
         height: 50%;
@@ -240,29 +236,29 @@ body {
     /* Solar system container should scroll horizontally */
     .solar-system {
         display: flex;
-        flex-direction: row; /* Align items in a row */
+        flex-direction: row;
         align-items: center;
         justify-content: flex-start;
-        overflow-x: auto; /* Enable horizontal scrolling */
-        white-space: nowrap; /* Prevent wrapping of elements */
+        overflow-x: auto; 
+        white-space: nowrap; 
         padding: 10px;
     }
 
     /* Ensure celestial bodies are spaced out and aligned horizontally */
     .celestial-body {
-        margin-right: 40px; /* Add space between planets */
-        display: inline-block; /* Make them inline elements to prevent wrapping */
+        margin-right: 40px; 
+        display: inline-block;
         position: relative;
-        white-space: normal; /* Reset white space so text doesn't behave strangely */
+        white-space: normal; 
     }
 
     .celestial-body img {
-        width: 50px; /* Smaller size for planets */
+        width: 50px;
         height: 50px;
     }
 
     .sun img {
-        width: 200px; /* Adjust size for the Sun */
+        width: 200px; 
         height: 200px;
         margin-left: 50px;
     }
@@ -271,13 +267,13 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-top: -50px; /* Add space between planet and its moons */
+        margin-top: -50px; 
     }
 
     .moon {
         width: 30px !important;
         height: 30px !important;
-        margin-left: 5px; /* Add space between moons */
+        margin-left: 5px; 
     }
 
     /* Ensure the Explore button is below everything */
@@ -300,11 +296,10 @@ body {
 
 /* Even smaller screens (like mobile in portrait mode) */
 @media screen and (max-width: 480px) {
-    /* Further reduce celestial body sizes */
     .celestial-body img {
         width: 40px;
         height: 40px;
-        margin-right: 30px; /* Adjust margin for smaller screens */
+        margin-right: 30px; 
     }
 
     .sun img {
@@ -315,7 +310,7 @@ body {
     .moon {
         width: 25px !important;
         height: 25px !important;
-        margin-left: 5px; /* Keep margins between moons */
+        margin-left: 5px;
     }
 
     /* Ensure the explore button is at the bottom */
@@ -325,32 +320,32 @@ body {
 }
 
 .sidebar {
-    width: 95%;              /* Full width */
-    height: 100%;             /* Full height */
-    top: 0;                   /* Position at the top */
-    left: 0;                  /* Position at the left */
-    background-color: #1e1e1e; /* Dark background */
-    padding: 20px;            /* Padding for content inside */
-    display: none;            /* Hidden by default */
-    flex-direction: column;   /* Ensure column layout for content */
-    position: fixed;          /* Fixed to viewport */
-    z-index: 1000;            /* Ensure it's above all other content */
-    overflow-y: auto;         /* Allow scrolling for content if it overflows */
+    width: 25%;         
+    height: 100%;    
+    top: 0;         
+    left: 0;             
+    background-color: #1e1e1e; 
+    padding: 20px;            
+    display: none;        
+    flex-direction: column;  
+    position: fixed;        
+    z-index: 1000;            
+    overflow-y: auto;        
 }
 
 /* Make sure the image in the sidebar scales properly */
 .sidebar img {
-    width: 100%;              /* Full width for the image */
-    height: auto;             /* Keep aspect ratio */
-    max-width: 400px;         /* Optional: maximum width for larger screens */
+    width: 70%;              
+    height: auto;            
+    max-width: 400px;       
     margin-bottom: 20px;
-    align-self: center;       /* Center the image horizontally */
+    align-self: center;       
 }
 
 /* Close button positioned in the top-right corner */
 .close-btn {
-    position: absolute;       /* Absolute positioning */
-    top: 10px;                /* Position it in the top-right corner */
+    position: absolute;      
+    top: 10px;                
     right: 10px;
     background: none;
     border: none;
@@ -359,20 +354,19 @@ body {
     cursor: pointer;
 }
 
-/* Ensure sidebar text content scales properly */
 .sidebar h2,
 .sidebar p {
-    text-align: center;       /* Center the text content */
+    text-align: center;      
     margin-bottom: 20px;
 }
 
-/* Adjustments for smaller screens */
 @media screen and (max-width: 768px) {
     .sidebar {
-        padding: 10px;        /* Adjust padding on smaller screens */
+        padding: 10px;       
+        width: 95%;
     }
 
     .sidebar img {
-        max-width: 300px;     /* Limit the size of the image on smaller screens */
+        max-width: 300px;    
     }
 }
